@@ -5,7 +5,7 @@ const logger = debug('practica-back:server')
 import http from 'http'
 
 
-let port = normalizePort(process.env.PORT || '3000');
+let port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 
 
@@ -64,5 +64,5 @@ function onListening() {
   let bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  logger('Listening on ' + bind);
+    debug('Listening on ' + bind);
 }
